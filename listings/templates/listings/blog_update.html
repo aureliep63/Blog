@@ -1,0 +1,15 @@
+{% extends "listings/base.html" %}
+
+{% block content %}
+
+<h1>Modifier l'article</h1>
+
+<br><a href="{% url 'blog-list' %}" class="ms-4">Revenir aux articles</a>
+
+<form action="" method="POST" class="text-center">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Envoyer">
+</form>
+
+{% endblock %}

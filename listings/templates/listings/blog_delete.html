@@ -1,0 +1,16 @@
+{% extends "listings/base.html" %}
+
+{% block content %}
+
+<h1>Supprimer l'article</h1>
+
+<a href="{% url  'blog-update' blog.id %}" class="ms-4"> Modifier cet article</a>
+<br><a href="{% url 'blog-list' %}" class="ms-4">Revenir aux articles</a>
+
+<p>Etes-vous sûr de vouloir supprimer cet article : {{ blog.titre }} ?</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Supprimer">
+</form>
+{% endblock %}

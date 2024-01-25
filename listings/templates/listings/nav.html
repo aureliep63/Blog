@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img
+                src="https://www.sparks-formation.com/wp-content/uploads/2020/06/django-logo.png" alt=""
+                class="w-25"></a>
+        <!--possibilité de mettre un logo au lieu du mot-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--2eme partie de flex-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!--Lien cliquable en gras, si non gras retiré active-->
+                <li class="nav-item">
+                    <a class="nav-link active fs-2" aria-current="page" href="{% url 'blog-list' %}">
+                        Articles</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
