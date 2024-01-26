@@ -2,14 +2,17 @@
 
 {% block content %}
 
-<h1>Modifier l'article</h1>
+<h1 class="ms-4">Modifier l'article</h1>
 
-<br><a href="{% url 'blog-list' %}" class="ms-4">Revenir aux articles</a>
+<br><a href="{% url 'blog-list' %}" class="ms-4 text-dark fst-italic ">Revenir aux articles</a>
 
-<form action="" method="POST" class="text-center">
-    {% csrf_token %}
-    {{ form.as_p}}
-    <input type="submit" value="Envoyer">
-</form>
-
+<div class="container">
+    <div class="row">
+        <form action="" method="POST" class="">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <input type="submit" value="Envoyer" class=" btn btn-dark">
+        </form>
+    </div>
+</div>
 {% endblock %}

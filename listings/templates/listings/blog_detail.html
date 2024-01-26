@@ -5,15 +5,15 @@
 
 <h1>{{ blog.titre }}</h1>
 
+<a href="{% url 'blog-list' %}" class="ms-4 text-dark fst-italic ">Revenir aux articles</a><br>
+<a href="{% url  'blog-update' blog.id %}" class="ms-4 btn btn-dark mt-4"> Modifier cet article</a>
 
-<a href="{% url  'blog-update' blog.id %}" class="ms-4 btn btn-sucess"> Modifier cet article</a>
-<br><a href="{% url 'blog-list' %}" class="ms-4 btn btn-dark">Revenir aux articles</a>
 
 
 <div class="container ms-5 mt-4">
     <div class="row">
         <div class="col-md-8">
-            <img src="{{ blog.photo }}" alt="photo de {{ blog.titre}}" class="mw-75">
+            <img src="{{ blog.photo }}" alt="photo de {{ blog.titre}}" class="w-100">
         </div>
         <div class="col-md-4">
             <p class="fs-4 ms-5"> {{ blog.description }}</p>

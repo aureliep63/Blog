@@ -13,7 +13,7 @@
             <div class="card" style="width: 18rem;">
                 <img src="{{ blog.photo }}" class="card-img-top" alt="photo de l'article {{ blog.titre }}">
                 <div class="card-body">
-                    <h5 class="card-title">{{ blog.titre }}</h5>
+                    <h5 class="card-title">{{ blog.titre | truncatechars:35 }}</h5>
                     <p class="card-text">{{ blog.description | truncatechars:50 }}</p>
 
                     <a href="{% url 'blog-detail' blog.id %}" class="btn btn-dark"> Voir l'article</a><br>
