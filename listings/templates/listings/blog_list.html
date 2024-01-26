@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1 class="ms-5">Tous les articles</h1>
-<a href="{% url 'blog-add' %}" class="ms-5">Créer un article</a>
+<a href="{% url 'blog-add' %}" class="ms-5 btn btn-dark">Créer un article</a>
 <div class="container">
     <div class="row">
 
@@ -16,9 +16,10 @@
                     <h5 class="card-title">{{ blog.titre }}</h5>
                     <p class="card-text">{{ blog.description | truncatechars:50 }}</p>
 
-                    <a href="{% url 'blog-detail' blog.id %}"> Voir l'article</a><br>
-                    - <a href="{% url 'blog-update' blog.id %}"><i class="fa-regular fa-pen-to-square"></i></a>
-                    - <a href="{% url 'blog-delete' blog.id %}"><i class="fa-solid fa-trash-can"></i></a>
+                    <a href="{% url 'blog-detail' blog.id %}" class="btn btn-dark"> Voir l'article</a><br>
+                    - <a href="{% url 'blog-update' blog.id %}"><i
+                            class="fa-regular fa-pen-to-square text-dark"></i></a>
+                    - <a href="{% url 'blog-delete' blog.id %}"><i class="fa-solid fa-trash-can text-dark"></i></a>
 
                 </div>
             </div>
